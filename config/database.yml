@@ -82,6 +82,7 @@ production:
   primary: &primary_production
     <<: *default
     database: tienshop_production
+    url: <%= ENV['DATABASE_URL'] %>
     username: tienshop
     password: <%= ENV["TIENSHOP_DATABASE_PASSWORD"] %>
   cache:

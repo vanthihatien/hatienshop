@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resource :session
+  resources :passwords, param: :token
+  devise_for :users
   get "products/index"
   get "/products", to: "products#index"
   resources :products
